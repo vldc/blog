@@ -1,0 +1,39 @@
+@import "variables.scss";
+
+$headerHeight: 150px;
+$footerHeight: 50px;
+
+body {
+    background: $w;
+    color: $text-black;
+    font-family: Calibri, Candara, Segoe, “Segoe UI”, Optima, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.main-header,
+.main-footer {
+    background-color: $b;
+    color: $w;
+    overflow: hidden;
+    position: fixed;
+}
+
+.main-header {
+    height: $headerHeight;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.main-container {
+    margin: $headerHeight auto $footerHeight;
+    padding: 20px 0;
+    width: 80%;
+}
+
+.main-footer {
+    bottom: 0;
+    height: $footerHeight;
+    left: 0;
+    right: 0;
+}

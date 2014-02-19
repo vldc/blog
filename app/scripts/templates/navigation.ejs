@@ -1,0 +1,14 @@
+    <h1 class="main-menu-title">
+        <%= lng.menuTitle %>
+    </h1>
+    <ul class="main-menu-list">
+        <li class="main-menu-list-item">
+            <a class="main-menu-list-link <%= appState.get('currentPage') === 'home' ? 'active' : '' %>" href="/#"><%= lng.home %></a>
+        </li>
+        <li class="main-menu-list-item">
+            <a class="main-menu-list-link <%= appState.get('currentPage') === 'posts' ? 'active' : '' %>" href="/#posts"><%= lng.posts %></a>
+        </li>
+        <li class="main-menu-list-item">
+            <a class="main-menu-list-link <%= appState.get('currentPage') === 'about' ? 'active' : '' %>" href="/#about"><%= lng.about %></a>
+        </li>
+    </ul>

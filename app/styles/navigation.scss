@@ -1,0 +1,50 @@
+@import "compass/css3";
+@import "variables.scss";
+
+.main-menu-title,
+.main-menu-list-item,
+.main-menu-list-link {
+    display: inline-block;
+}
+
+.main-menu-title {
+    display: none;
+}
+
+.main-menu-list {
+    margin-left: 10%;
+    position: absolute;
+}
+
+.main-menu-list-item {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.main-menu-list-link {
+    &:link,
+    &:visited {
+        color: $w;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 30px;
+        text-decoration: none;
+        width: 50px;
+
+        @include text-shadow($link-blue 0 0 1px, $link-blue 0 0 5px);
+        @include transition(all .3s ease);
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        color: $b;
+
+        @include text-shadow($w 0 0 1px, $w 0 0 5px, $w 0 0 15px);
+    }
+
+    &.active {
+        text-decoration: underline;
+    }
+}
