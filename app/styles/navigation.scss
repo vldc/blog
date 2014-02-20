@@ -30,7 +30,7 @@
         font-weight: bold;
         line-height: 30px;
         text-decoration: none;
-        width: 50px;
+        min-width: 50px;
 
         @include text-shadow($link-blue 0 0 1px, $link-blue 0 0 5px);
         @include transition(all .3s ease);

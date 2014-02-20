@@ -1,0 +1,13 @@
+{
+    "langName": "en_US",
+    "values": {
+        "about": "About",
+        "en": "English",
+        "footer": "Footer",
+        "home": "Home",
+        "mainTitle": "Title",
+        "menuTitle": "Menu",
+        "pl": "Polish",
+        "posts": "Posts"
+    }
+}

@@ -9,13 +9,11 @@ define([
     var LangModel = Backbone.Model.extend({
         defaults: {
             'langName': 'en_US',
-            'values': {
-                'about': 'About',
-                'home': 'Home',
-                'mainTitle': 'Title',
-                'menuTitle': 'Menu',
-                'posts': 'Posts'
-            }
+            'values': {}
+        },
+
+        url: function () {
+            return '/i18n/' + this.attributes.langName + '.json';
         }
     });
 

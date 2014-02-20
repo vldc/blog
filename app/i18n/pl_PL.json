@@ -1,0 +1,13 @@
+{
+    "langName": "pl_PL",
+    "values": {
+        "about": "O blogu",
+        "en": "Angielski",
+        "footer": "Stopka",
+        "home": "Strona Główna",
+        "mainTitle": "Tytuł",
+        "menuTitle": "Menu",
+        "pl": "Polski",
+        "posts": "Posty"
+    }
+}

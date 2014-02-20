@@ -9,9 +9,9 @@ define([
     'use strict';
 
     var MainModel = ConfigModel.extend({
-        initialize: function () {
-            ConfigModel.prototype.initialize.apply(this);
-        },
+        // initialize: function () {
+        //     ConfigModel.prototype.initialize.apply(this);
+        // },
         defaults: {
             appState: AppStateModel.getInstance()
         }

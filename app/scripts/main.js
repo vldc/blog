@@ -29,16 +29,20 @@ require.config({
 require([
     'backbone',
     'routes/blog',
-    'models/navigation',
-    'views/header'
-], function (Backbone, Router, NavigationModel, HeaderView) {
+    'models/main',
+    'views/header',
+    'views/footer'
+], function (Backbone, Router, MainModel, HeaderView, FooterView) {
+
     var router = new Router();
     var headerView = new HeaderView({
         el: $('.main-header'),
-        model: NavigationModel
+        model: MainModel,
     });
-
-    headerView.render();
+    var footerView = new FooterView({
+        el: $('.main-footer'),
+        model: MainModel
+    });
 
     Backbone.history.start();
 });

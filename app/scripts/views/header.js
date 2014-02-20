@@ -9,20 +9,20 @@ define([
     'views/navigation'
 ], function ($, _, Backbone, JST, BaseView, NavigationView) {
     'use strict';
-
+    var model;
     var HeaderView = BaseView.extend({
-        template: JST['app/scripts/templates/header.ejs'],
-
         initialize: function () {
-            this.navigationView = new NavigationView({
-                model: this.model
-            });
+            model = this.model.getInstance();
+            model.langCollection.once('change', this.render, this);
+            model.on('change', this.render, this);
+            this.render();
         },
 
+        template: JST['app/scripts/templates/header.ejs'],
+
         render: function () {
-            var model = new this.model();
             this.$el.html(this.template(model.attributes));
-            this.renderNested(this.navigationView, '.main-navigation');
+            this.renderNested(new NavigationView({model: this.model}), '.main-navigation');
         }
     });
 

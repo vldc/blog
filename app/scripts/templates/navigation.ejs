@@ -1,14 +1,28 @@
     <h1 class="main-menu-title">
-        <%= lng.menuTitle %>
+        <%= lng.values.menuTitle %>
     </h1>
     <ul class="main-menu-list">
         <li class="main-menu-list-item">
-            <a class="main-menu-list-link <%= appState.get('currentPage') === 'home' ? 'active' : '' %>" href="/#"><%= lng.home %></a>
+            <a class="main-menu-list-link <%= appState.get('currentPage') === 'home' ? 'active' : '' %>" href="/#"><%= lng.values.home %></a>
         </li>
         <li class="main-menu-list-item">
-            <a class="main-menu-list-link <%= appState.get('currentPage') === 'posts' ? 'active' : '' %>" href="/#posts"><%= lng.posts %></a>
+            <a class="main-menu-list-link <%= appState.get('currentPage') === 'posts' ? 'active' : '' %>" href="/#posts"><%= lng.values.posts %></a>
         </li>
         <li class="main-menu-list-item">
-            <a class="main-menu-list-link <%= appState.get('currentPage') === 'about' ? 'active' : '' %>" href="/#about"><%= lng.about %></a>
+            <a class="main-menu-list-link <%= appState.get('currentPage') === 'about' ? 'active' : '' %>" href="/#about"><%= lng.values.about %></a>
+        </li>
+        <li class="main-menu-list-item">
+            <button
+                data-val="en_US"
+                class="main-menu-list-link change-lang en <%= lng.values.langName === 'en_US' ? 'active' : '' %>">
+                <%= lng.values.en %>
+            </button>
+        </li>
+        <li class="main-menu-list-item">
+            <button
+                data-val="pl_PL"
+                class="main-menu-list-link change-lang pl <%=  lng.values.langName === 'pl_PL' ? 'active' : '' %>">
+                <%= lng.values.pl %>
+            </button>
         </li>
     </ul>
