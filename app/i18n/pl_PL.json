@@ -2,12 +2,14 @@
     "langName": "pl_PL",
     "values": {
         "about": "O blogu",
+        "content": "Treść",
         "en": "Angielski",
         "footer": "Stopka",
         "home": "Strona Główna",
         "mainTitle": "Tytuł",
         "menuTitle": "Menu",
         "pl": "Polski",
-        "posts": "Posty"
+        "posts": "Posty",
+        "title": "Tytuł"
     }
 }

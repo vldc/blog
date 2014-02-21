@@ -16,6 +16,8 @@ body {
     color: $w;
     overflow: hidden;
     position: fixed;
+
+    @include box-shadow(0 5px 15px $w);
 }
 
 .main-header {

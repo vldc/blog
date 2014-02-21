@@ -8,18 +8,16 @@ define([
 ], function ($, _, Backbone, JST) {
     'use strict';
 
-    var model;
     var NavigationView = Backbone.View.extend({
         initialize: function() {
-            model = this.model.getInstance();
-            model.get('appState').on('change', this.render, this);
-            model.on('change', this.render, this);
+            this.model.get('appState').on('change', this.render, this);
+            this.model.on('change', this.render, this);
         },
 
         template: JST['app/scripts/templates/navigation.ejs'],
 
         render: function () {
-            this.$el.html(this.template(model.attributes));
+            this.$el.html(this.template(this.model.attributes));
             return this;
         },
 
@@ -29,8 +27,8 @@ define([
 
         changeLang: function (e) {
             var newLang = $(e.target).data('val');
-            model.langName = newLang;
-            model.changeLang();
+            this.model.langName = newLang;
+            this.model.changeLang();
         }
     });
 

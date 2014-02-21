@@ -13,9 +13,18 @@ define([
     var appState = AppStateModel.getInstance();
     var defViewCfg = {el: $('.main-container')};
     var views = {
-        'posts': new PostsView(defViewCfg),
-        'home': new HomeView(defViewCfg),
-        'about': new AboutView(defViewCfg)
+        'posts': function () {
+            return new PostsView(defViewCfg);
+        },
+        'home': function () {
+            return new HomeView(defViewCfg);
+        },
+        'about': function () {
+            return new AboutView(defViewCfg);
+        }
+    };
+    var instantiateView = function (viewName) {
+        return views[viewName]();
     };
 
     var genRoute = function (routeName, options) {
@@ -27,7 +36,7 @@ define([
         return function () {
             options.fn();
             appState.set('currentPage', routeName);
-            views[routeName].render();
+            instantiateView(routeName).render();
         };
     };
 

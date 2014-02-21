@@ -37,11 +37,11 @@ require([
     var router = new Router();
     var headerView = new HeaderView({
         el: $('.main-header'),
-        model: MainModel,
+        model: MainModel.getInstance(),
     });
     var footerView = new FooterView({
         el: $('.main-footer'),
-        model: MainModel
+        model: MainModel.getInstance()
     });
 
     Backbone.history.start();
