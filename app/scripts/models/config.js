@@ -37,11 +37,7 @@ define([
                 }
             });
 
-            this.set('lng', {});
-
-            $.when.apply(promises).done(function () {
-                this.changeLang();
-            }.bind(this));
+            $.when.apply(promises).done(this.changeLang.bind(this));
         }
     });
     _.extend(ConfigModel, singleton);

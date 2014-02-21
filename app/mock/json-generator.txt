@@ -1,0 +1,54 @@
+comments:
+[
+    '{{repeat(5, 7)}}',
+    {
+        id: '{{index}}',
+        date: {
+            year: '{{date(YYYY)}}',
+            month: '{{date(M)}}',
+            day: '{{date(d)}}',
+            hour: '{{date(h)}}',
+            minute: '{{date(mm)}}',
+            second: '{{date(ss)}}'
+        },
+        author: '{{firstName}} {{surname}}',
+        content: '{{lorem(1,paragraphs)}}'
+    }
+
+]
+
+posts:
+[
+    '{{repeat(5, 7)}}',
+    {
+        id: '{{index}}',
+        date: {
+            year: '{{date(YYYY)}}',
+            month: '{{date(M)}}',
+            day: '{{date(d)}}',
+            hour: '{{date(h)}}',
+            minute: '{{date(mm)}}',
+            second: '{{date(ss)}}'
+        },
+        author: '{{firstName}} {{surname}}',
+        title: '{{lorem(1,sentences)}}',
+        content: '{{lorem(5,paragraphs)}}',
+        comments: [
+            '{{repeat(5, 7)}}',
+            {
+                id: '{{index}}',
+                date: {
+                    year: '{{date(YYYY)}}',
+                    month: '{{date(M)}}',
+                    day: '{{date(d)}}',
+                    hour: '{{date(h)}}',
+                    minute: '{{date(mm)}}',
+                    second: '{{date(ss)}}'
+                },
+                author: '{{firstName}} {{surname}}',
+                content: '{{lorem(1,paragraphs)}}'
+            }
+
+        ]
+    }
+]
